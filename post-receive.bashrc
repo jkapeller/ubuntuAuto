@@ -1,13 +1,14 @@
 #!/bin/bash
 
 # you might want to change these variables to fit your environment
+# DJANGO_PROJECT default value will be changed with djangoAuto script when setting up the project
 PROJECT_NAME=$(basename "$PWD")
 TARGET_BRANCH="master"
 GIT_DIR=/srv/git/$PROJECT_NAME
 GIT_REPO=$PROJECT_NAME
-DJANGO_PROJECT="LMsunshine"
+DJANGO_PROJECT="default"
 GIT_WORK_DIR=/var/pysites/$PROJECT_NAME/$GIT_REPO
-VENV_DIR=/var/pysites/$PROJECT_NAME/py36_venv
+VENV_DIR=/var/pysites/$PROJECT_NAME/venv
 DJANGO_SETTINGS_MODULE="$DJANGO_PROJECT.settings.production"
 
 while read oldrev newrev ref
