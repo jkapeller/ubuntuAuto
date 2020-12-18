@@ -33,7 +33,7 @@ do
                 git --work-tree=$GIT_WORK_DIR --git-dir=$GIT_DIR checkout -f
                 
                 # move local_settings.py to the right directory
-                if [ -f /var/pysites/$PROJECT_NAME/local_settings.py]; then
+                if [ -f "/var/pysites/$PROJECT_NAME/local_settings.py" ]; then
                         mv /var/pysites/$PROJECT_NAME/local_settings.py $GIT_WORK_DIR/$DJANGO_PROJECT/settings/local_settings.py
                 fi
 
